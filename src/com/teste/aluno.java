@@ -73,12 +73,15 @@ public class aluno {
 			while(rs.next()){
 				System.out.print( preenche_espacos(rs.getString("nome"), 30));
 				System.out.print( preenche_espacos(rs.getString("nota1"),8));
-				System.out.println(preenche_espacos(rs.getString("nota2"));
+				System.out.println(preenche_espacos(rs.getString("nota2"),8));
 			}
 			
 		} catch(Exception e) {
 		    System.out.println("Erro ao selecionar registros.");
 		}
+		
+		System.out.println("");
+		System.out.println("");
 		
 	}
 	
