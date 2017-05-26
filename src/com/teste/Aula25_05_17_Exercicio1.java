@@ -5,6 +5,7 @@ import com.opet.util.Reader;
 public class Aula25_05_17_Exercicio1 {
 	
 	public static void main(String[] args) throws Exception {
+		aluno objAluno = new aluno();
 		int opcao = 0;
 		while (opcao != 9) {
 			System.out.println("Informe a sua opção:");
@@ -19,15 +20,19 @@ public class Aula25_05_17_Exercicio1 {
 			case 1:
 				System.out.println("Informe o nome do aluno:");
 				String nomeAluno;
-				Double nota1, nota2;
+				Double nota1;
+				Double nota2;
 				nomeAluno = Reader.readString();
 				System.out.println("Informe a primeira nota:");
 				nota1 = Reader.readDouble();
 				System.out.println("Informe a segunda nota:");
 				nota2 = Reader.readDouble();
 				
-				aluno objAluno = new aluno();
+				
 				aluno.inserirAluno(nomeAluno, nota1, nota2);
+				break;
+			case 4: 
+				aluno.listarAlunos();
 				break;
 
 			default:
@@ -36,5 +41,7 @@ public class Aula25_05_17_Exercicio1 {
 		}
 		System.out.println("Bye bye!");
 	}
+	
+	
 
 }
